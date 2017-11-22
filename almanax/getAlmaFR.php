@@ -1,3 +1,36 @@
+<style>
+html {
+    background-color: #f5f5f5;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:nth-child(odd){
+    background: #d3d3d3;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes mymove {
+    from {background-color: #d3d3d3;}
+    to {background-color: #adadad;}
+}
+@keyframes mymove {
+    from {background-color: #d3d3d3;}
+    to {background-color: #adadad;}
+}
+
+td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding-right: 5px;
+}
+</style>
+
+
 <?php
 // tested with http://phpfiddle.org/
 // http://dofp.la/y0dYB/
@@ -9,7 +42,8 @@ $almatable = array (array ());
 
 date_default_timezone_set('America/Los_Angeles');
 
-for ($i = 0; $i <= 5; $i++) {
+// show user set DAYS or default to 3 days
+for ($i = 0; $i <= (is_numeric($_GET["DAYS"]) ? (int)$_GET["DAYS"] : 2); $i++) {
     $date = date("Y-m-d", time() + 86400 * $i) . "<br>";
 
     // http://www.krosmoz.com/fr/almanax/yyyy-mm-dd

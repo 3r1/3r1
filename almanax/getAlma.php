@@ -1,3 +1,23 @@
+<style>
+html {
+    background-color: #f5f5f5;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+tr:nth-child(odd){
+    background: #d3d3d3;
+}
+
+td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding-right: 5px;
+}
+</style>
+
 <?php
 // tested with http://phpfiddle.org/
 // http://dofp.la/y0dYB/
@@ -9,7 +29,8 @@ $almatable = array (array ());
 
 date_default_timezone_set('America/Los_Angeles');
 
-for ($i = 0; $i <= 5; $i++) {
+// show user set DAYS or default to 7 days
+for ($i = 0; $i <= ( is_numeric($_GET["DAYS"]) ? ((int)$_GET["DAYS"] -1) : 2); $i++) {
     $date = date("Y-m-d", time() + 86400 * $i) . "<br>";
 
     // http://www.krosmoz.com/en/almanax/yyyy-mm-dd

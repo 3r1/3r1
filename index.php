@@ -208,7 +208,8 @@ line-height: 1.4;
           <ul>
             <li><a href="./streaminfo/?channel=CHANNELNAME">streaminfo</a> (displays uptime with viewers and game or displays an offline message)</li>
             <li><a href="./twitch/following.php?channel=CHANNELNAME&user=USERNAME">followtime</a> (displays followtime of user in a channel)</li>
-            <li><a href="./almanax/getalma.php?DAYS=7">almanax tracker</a> (displays almanax bonus and quest item for <a href="https://dofus.com/en/">dofus</a></li>
+            <li><a href="./almanax/getalma.php?DAYS=3">almanax tracker</a> (displays almanax bonus and quest item for <a href="https://dofus.com/en/">dofus)</a></li>
+            <li><a href="./almanax/getalmaFR.php?DAYS=3">almanax tracker</a> (récupère le bonus almanax et l'objet de quête pour <a href="https://dofus.com/fr/">dofus)</a></li>
           </ul>
         <h2>Future Pages</h2>
         <h3>Not a complete list:</h3>
